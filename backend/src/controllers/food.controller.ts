@@ -6,7 +6,8 @@ export class FoodController {
     try {
       const foods = await FoodModel.getAll();
       res.json(foods);
-    } catch (error) {
+    } catch (error: unknown) {
+      console.error("Erreur getAll:", error);
       res.status(500).json({ error: "Erreur serveur" });
     }
   }
@@ -19,7 +20,8 @@ export class FoodController {
       } else {
         res.status(404).json({ error: "Aliment non trouvé" });
       }
-    } catch (error) {
+    } catch (error: unknown) {
+      console.error("Erreur getById:", error);
       res.status(500).json({ error: "Erreur serveur" });
     }
   }
@@ -29,7 +31,8 @@ export class FoodController {
       const term = req.query.q as string;
       const foods = await FoodModel.search(term);
       res.json(foods);
-    } catch (error) {
+    } catch (error: unknown) {
+      console.error("Erreur search:", error);
       res.status(500).json({ error: "Erreur serveur" });
     }
   }
@@ -38,7 +41,8 @@ export class FoodController {
     try {
       const food = await FoodModel.create(req.body);
       res.status(201).json(food);
-    } catch (error) {
+    } catch (error: unknown) {
+      console.error("Erreur create:", error);
       res.status(500).json({ error: "Erreur serveur" });
     }
   }
@@ -51,7 +55,8 @@ export class FoodController {
       } else {
         res.status(404).json({ error: "Aliment non trouvé" });
       }
-    } catch (error) {
+    } catch (error: unknown) {
+      console.error("Erreur update:", error);
       res.status(500).json({ error: "Erreur serveur" });
     }
   }
@@ -64,7 +69,8 @@ export class FoodController {
       } else {
         res.status(404).json({ error: "Aliment non trouvé" });
       }
-    } catch (error) {
+    } catch (error: unknown) {
+      console.error("Erreur delete:", error);
       res.status(500).json({ error: "Erreur serveur" });
     }
   }
