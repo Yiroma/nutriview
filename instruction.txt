@@ -1,0 +1,7 @@
+J'ai déjà crée une application nextjs de base. Dans le fichier "src/app/page.tsx", je veux que tu me crées les composants suivants :
+
+1. Une liste de 500 aliments, pour chaques aliments (par exemple: pomme de terre, oignon, riz, etc), il y aura toutes les informations nutritionnelles de cet aliment pour 100 grammes.
+2. L'utilisateur doit avoir un champs de recherche où il va pouvoir écrire un aliment, le choix de l'aliment sera suggérer au fur et à mesure que l'utilisateur écrit dans le champs de recherche. L'utilisateur peut valider son choix en cliquant sur la suggestion.
+3. Une fois l'aliment validé, il y aura un texte "Aliment sélectionné: {nom de l'aliment}". Si aucun aliment n'est sélectionné, il y aura un texte "Aucun aliment sélectionné".
+4. Si l'utilisateur à validé un aliment, il peut indiquer le grammages souhaité dans un input.
+5. Ensuite, en fonction de l'aliment et du grammage, afficher toutes les informations nutritionnels sur cet aliment (calories, protéines, glucides, lipides, etc) avec 1 colonne pour les 100grammes et un autre colonne pour le grammage de choisi par l'utilisateur.

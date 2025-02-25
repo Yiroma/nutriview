@@ -1,0 +1,48 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API Calculateur de Nutrition",
+    "version": "1.0.0",
+    "description": "API pour le calculateur de nutrition"
+  },
+  "paths": {
+    "/api/foods": {
+      "get": {
+        "summary": "Récupérer tous les aliments",
+        "responses": {
+          "200": {
+            "description": "Liste des aliments"
+          }
+        }
+      },
+      "post": {
+        "summary": "Créer un nouvel aliment",
+        "responses": {
+          "201": {
+            "description": "Aliment créé"
+          }
+        }
+      }
+    },
+    "/api/foods/search": {
+      "get": {
+        "summary": "Rechercher des aliments",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Résultats de la recherche"
+          }
+        }
+      }
+    }
+  }
+}
