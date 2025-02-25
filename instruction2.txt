@@ -1,0 +1,14 @@
+Je veux créer un back-end pour cette l'application en utilisant express.js et mysql en REST api structurer (route, controller, model).
+
+1. créer le serveur avec express.js
+2. créer la base de données avec la table food
+3. créer les routes pour la table food
+4. créer les contrôleurs pour les routes
+5. créer les modèles pour les routes
+6. créer la connexion à la base de données
+7. créer le point d'entrée de l'application
+8. créer le fichier .env pour la connexion à la base de données
+9. créer le fichier .env.sample
+10. apporte les modification nécessaire dans .gitignore
+11. apporte les modification nécessaire dans le front-end
+12. créer la documentation de l'api
